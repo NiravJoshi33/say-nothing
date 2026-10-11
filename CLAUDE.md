@@ -9,7 +9,7 @@ Instructions for AI coding agents (Claude Code, Codex, etc.) working in this rep
 
 ## Read first
 
-**Highest priority:** if `internal/INSTRUCTIONS.md` exists, read it first. It overrides this file and stays out of commits, docs and PRs.
+**Highest priority:** if `internal/` exists, read it first. It overrides this file.
 
 Code in this repo is written by hand by the owner. Agents review and explain; they don't write code.
 
