@@ -1,0 +1,3 @@
+{
+  "_comment": "Claude Code project settings. Opt-in hook: .claude/hooks/block-grep-for-symbols.sh (its header says how to enable it once LSP is verified)."
+}
