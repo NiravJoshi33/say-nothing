@@ -357,3 +357,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# say-nothing: cached embeddings and weights are rebuilt, not committed
+*.npy
+*.pt
+.DS_Store
+internal/

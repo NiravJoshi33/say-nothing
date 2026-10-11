@@ -1,2 +1,3 @@
-# agent-repo-template
-A template repo to bootstrap new repos with AI support documents &amp; structure built in
+# say-nothing
+
+A small model that learns when an image should get no caption at all. Hand-written PyTorch on top of a frozen image encoder. Work in progress.

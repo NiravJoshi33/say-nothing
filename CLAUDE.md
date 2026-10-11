@@ -7,10 +7,17 @@ Instructions for AI coding agents (Claude Code, Codex, etc.) working in this rep
 
 ---
 
+## Read first
+
+**Highest priority:** if `internal/INSTRUCTIONS.md` exists, read it first. It overrides this file and stays out of commits, docs and PRs.
+
+Code in this repo is written by hand by the owner. Agents review and explain; they don't write code.
+
+---
+
 ## Before planning or writing any code
 
 1. Open [`docs/INDEX.md`](./docs/INDEX.md) — use it to pick which docs to load. Don't blanket-read `docs/`. Never read `docs/archive/` unless explicitly investigating history.
-2. Read [`docs/AI_USAGE.md`](./docs/AI_USAGE.md) — agent contract with ground rules, architecture rules, security/data rules, and testing requirements. These override default behavior.
 
 ---
 
@@ -22,14 +29,10 @@ Every doc, plan, comment, and response must be as short as possible while remain
 
 ## Workflow
 
-### For every non-trivial task
-1. Read this file and any relevant spec in `docs/specs/`.
-2. Explore the affected code before proposing changes (use LSP).
-3. Write a plan: what you'll change, what you won't, what could break, what tests cover it.
-4. Wait for approval.
-5. Execute against the plan. If reality forces a deviation, stop and report — don't improvise.
-6. Run tests and the linter before declaring done.
-7. Summarize what changed and anything notable for the reviewer.
+Code isn't delegated here, so the template's plan-approve-execute loop and `.agents/` don't apply. For a review:
+1. Read the file I point at and the step it's for (README).
+2. Run it if useful: `uv run python <file>`.
+3. Say what's wrong and where. No fixed code, no diffs.
 
 ---
 
@@ -131,15 +134,11 @@ After completing a feature or adding/removing a doc, update `docs/INDEX.md`: add
 
 ## Project-specific context
 
-> Fill these in when starting a new project from this template. Delete lines that don't apply.
-
-- **Stack:** _(language, framework, versions — e.g. "Next.js 15, TypeScript 5.4, pnpm workspace, Node 20")_
-- **Architecture pattern:** _(e.g. monorepo with apps/web + apps/api, hexagonal, modular monolith)_
-- **State management:** _(the one approach used here)_
-- **Styling approach:** _(the one approach used here)_
-- **Error handling convention:** _(e.g. Result types, exceptions, error returns)_
-- **How to run locally:** _(command)_
-- **How to run tests:** _(command)_
-- **How to run the linter:** _(command)_
-- **How to deploy:** _(command or link to runbook)_
-- **Things NOT to touch:** _(legacy module, vendor-managed code, generated files, etc.)_
+- **What it is:** a model that learns when to say nothing. Routes each image to caption, empty alt (`alt=""`, decorative), or refuse (charts, text, anything a caption would get wrong). Frozen pretrained image encoder plus a small PyTorch head trained by hand.
+- **The metric:** false positives on decorative first (never strip alt from real content), then decorative recall. Not plain accuracy.
+- **Stack:** Python 3.12, uv, PyTorch. Later: `transformers` for the frozen SigLIP encoder, Pillow.
+- **Layout:** `warmup/` first (toy training loops), project code after. Mine to decide.
+- **Data:** hand-labelled Wikimedia Commons images. Each keeps its own licence; source and licence per image live in `data/raw/manifest.json`, which travels with the images.
+- **How to run:** `uv run python <file>`
+- **Tests / linter:** none yet.
+- **Things NOT to touch:** any code file (see top).
