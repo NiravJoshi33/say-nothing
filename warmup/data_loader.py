@@ -28,6 +28,7 @@ with open("data/labels.csv") as csv_file:
     print("refuse: ", refuse_sum)
     print("empty: ", empty_sum)
     print("caption: ", caption_sum)
+
     
     
     
