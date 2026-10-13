@@ -1,0 +1,146 @@
+[
+  {
+    "file": "product_shoe.jpg",
+    "slug": "product_shoe",
+    "category": "product",
+    "human_should_produce": "informative",
+    "source_title": "File:Campus Martin Running Shoes.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Campus_Martin_Running_Shoes.jpg",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "product_chair.jpg",
+    "slug": "product_chair",
+    "category": "product",
+    "human_should_produce": "informative",
+    "source_title": "File:Library Chair dakota jackson.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Library_Chair_dakota_jackson.jpg",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "file": "chart_bar.jpg",
+    "slug": "chart_bar",
+    "category": "chart",
+    "human_should_produce": "informative",
+    "source_title": "File:Health indicators Bar chart.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Health_indicators_Bar_chart.png",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "chart_line.jpg",
+    "slug": "chart_line",
+    "category": "chart",
+    "human_should_produce": "informative",
+    "source_title": "File:1940-2024 Global surface temperature - stacked - Copernicus.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:1940-2024_Global_surface_temperature_-_stacked_-_Copernicus.jpg",
+    "license": "Attribution"
+  },
+  {
+    "file": "diagram_gear.jpg",
+    "slug": "diagram_gear",
+    "category": "engineering",
+    "human_should_produce": "informative",
+    "source_title": "File:Mechanical drawing for trade schools (1909) (14579121950).jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mechanical_drawing_for_trade_schools_(1909)_(14579121950).jpg",
+    "license": "No restrictions"
+  },
+  {
+    "file": "diagram_anatomy.jpg",
+    "slug": "diagram_anatomy",
+    "category": "complex",
+    "human_should_produce": "long-desc",
+    "source_title": "File:Amoeba-proteus-anatomy-labeled-diagram-zoology-practical-rupamdas-in.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Amoeba-proteus-anatomy-labeled-diagram-zoology-practical-rupamdas-in.jpg",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "decorative_tex.jpg",
+    "slug": "decorative_tex",
+    "category": "decorative",
+    "human_should_produce": "empty-alt",
+    "source_title": "File:Mixed Weeds Texture Seamless.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Mixed_Weeds_Texture_Seamless.jpg",
+    "license": "CC BY 4.0"
+  },
+  {
+    "file": "text_poster.jpg",
+    "slug": "text_poster",
+    "category": "image-of-text",
+    "human_should_produce": "verbatim",
+    "source_title": "File:Salvage Scrap propaganda poster crop2.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Salvage_Scrap_propaganda_poster_crop2.jpg",
+    "license": "Public domain"
+  },
+  {
+    "file": "text_sign.jpg",
+    "slug": "text_sign",
+    "category": "image-of-text",
+    "human_should_produce": "verbatim",
+    "source_title": "File:Ornate lettering on the gate sign for High Woolley - geograph.org.uk - 619511.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Ornate_lettering_on_the_gate_sign_for_High_Woolley_-_geograph.org.uk_-_619511.jpg",
+    "license": "CC BY-SA 2.0"
+  },
+  {
+    "file": "scene_people.jpg",
+    "slug": "scene_people",
+    "category": "photo",
+    "human_should_produce": "informative",
+    "source_title": "File:Novell people working late 2007.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Novell_people_working_late_2007.jpg",
+    "license": "CC BY 2.0"
+  },
+  {
+    "file": "scene_tractor.jpg",
+    "slug": "scene_tractor",
+    "category": "photo",
+    "human_should_produce": "informative",
+    "source_title": "File:Boy plowing with a tractor at sunset in Don Det, Laos.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Boy_plowing_with_a_tractor_at_sunset_in_Don_Det,_Laos.jpg",
+    "license": "CC BY-SA 4.0"
+  },
+  {
+    "file": "ui_screenshot.jpg",
+    "slug": "ui_screenshot",
+    "category": "screenshot",
+    "human_should_produce": "informative",
+    "source_title": "File:Screenshot wikiwand.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Screenshot_wikiwand.jpg",
+    "license": "CC BY 1.0"
+  },
+  {
+    "file": "decorative_orn.jpg",
+    "slug": "decorative_orn",
+    "category": "decorative",
+    "human_should_produce": "empty-alt",
+    "source_title": "File:Owen Jones - Examples of Chinese Ornament - 1867 - plate 040.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Owen_Jones_-_Examples_of_Chinese_Ornament_-_1867_-_plate_040.png",
+    "license": "Public domain"
+  },
+  {
+    "file": "decorative_rule.jpg",
+    "slug": "decorative_rule",
+    "category": "decorative",
+    "human_should_produce": "empty-alt",
+    "source_title": "File:Typographical ornament in The Heart of Europe.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Typographical_ornament_in_The_Heart_of_Europe.jpg",
+    "license": "Public domain"
+  },
+  {
+    "file": "text_screenshot.jpg",
+    "slug": "text_screenshot",
+    "category": "image-of-text",
+    "human_should_produce": "verbatim",
+    "source_title": "File:Error Message Example vbs.png",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Error_Message_Example_vbs.png",
+    "license": "CC BY-SA 3.0"
+  },
+  {
+    "file": "product_watch.jpg",
+    "slug": "product_watch",
+    "category": "product",
+    "human_should_produce": "informative",
+    "source_title": "File:DFC 2060 Street vendors load a motorbike with merchandise - plastic bags of goods and packaged items - parked in front of a shop with a sign advertising wristwatches for 100 baht.jpg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:DFC_2060_Street_vendors_load_a_motorbike_with_merchandise_-_plastic_bags_of_goods_and_packaged_items_-_parked_in_front_of_a_shop_with_a_sign_advertising_wristwatches_for_100_baht.jpg",
+    "license": "CC BY-SA 4.0"
+  }
+]

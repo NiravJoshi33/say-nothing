@@ -1,0 +1,17 @@
+filename,class,action,notes
+chart_bar.jpg,chart,refuse,needs the trend not a caption
+chart_line.jpg,chart,refuse,needs the trend
+decorative_orn.jpg,decorative,empty,fleuron ornament so alt is empty
+decorative_rule.jpg,decorative,empty,divider rule so alt is empty
+decorative_tex.jpg,decorative,empty,background texture so alt is empty
+diagram_anatomy.jpg,diagram,refuse,needs the mechanism
+diagram_gear.jpg,diagram,refuse,bevel gear drawing hand to a human
+product_chair.jpg,product,caption,caption is fine
+product_shoe.jpg,product,caption,caption is fine
+product_watch.jpg,product,caption,caption is fine
+scene_people.jpg,photo,caption,people at a table
+scene_tractor.jpg,photo,caption,boy with a tractor known good caption
+text_poster.jpg,text,refuse,OCR the words
+text_screenshot.jpg,text,refuse,OCR the words
+text_sign.jpg,text,refuse,OCR the words
+ui_screenshot.jpg,screenshot,refuse,hand back with OCR
