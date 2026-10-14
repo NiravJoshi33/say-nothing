@@ -1,8 +1,8 @@
 import csv
 
-def load_csv() -> list:
+def load_csv(path) -> list:
 
-    with open("data/labels.csv") as csv_file:
+    with open(path) as csv_file:
         reader = csv.DictReader(csv_file)
 
         data = []

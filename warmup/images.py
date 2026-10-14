@@ -9,7 +9,7 @@ import torch.nn as nn
 
 
 
-def get_embeddings(data):
+def get_embeddings(data, image_dir= "data/raw/"):
     model = AutoModel.from_pretrained("google/siglip-base-patch16-224")
     processor = AutoProcessor.from_pretrained("google/siglip-base-patch16-224")
     
@@ -18,7 +18,7 @@ def get_embeddings(data):
 
     for row in data:
         file_name = row["filename"]
-        with Image.open(f"data/raw/{file_name}") as img:
+        with Image.open(f"{image_dir}{file_name}") as img:
             images.append(img.convert("RGB"))
 
     
@@ -42,13 +42,13 @@ def load_embeddings(path):
     return data
 
 
-def get_or_create_embeddings(file_path, data):
+def get_or_create_embeddings(file_path, data, image_dir):
     try:
         path = Path(file_path)
         embeddings = torch.from_numpy(load_embeddings(path))
         print("loaded from cache")
     except FileNotFoundError:
-        embeddings = get_embeddings(data)
+        embeddings = get_embeddings(data, image_dir)
         print("generated new embeddings")
         save_embeddings(embeddings, file_path)
 
@@ -70,11 +70,15 @@ epochs = 1000
 optimizer = torch.optim.SGD(layer.parameters(), lr=learning_rate)
 criterion = nn.CrossEntropyLoss()
 
-data = load_csv()
+data = load_csv(path="data/labels.csv")
+new_data = load_csv(path="data/test/labels.csv")
+
 validation_row_positions =  [3, 9, 5, 15]
 training_data_pos = [i for i in range(len(data)) if i not in validation_row_positions]
 
-embeddings = get_or_create_embeddings("data/embeddings.npy", data)
+embeddings = get_or_create_embeddings("data/embeddings.npy", data, "data/raw/")
+new_embeddings = get_or_create_embeddings("data/new_embeddings.npy", new_data, "data/test/raw/")
+new_data_actions = [actions_map[new_data[i]["action"]] for i in range(len(new_data))]
 training_embeddings = embeddings[training_data_pos]
 validation_embeddings = embeddings[validation_row_positions]
 print(training_embeddings.shape)
@@ -128,4 +132,17 @@ with torch.no_grad():
 
 
 
+with torch.no_grad():
+    new_predictions = layer(new_embeddings)
+    
+    new_predictions_indices = torch.argmax(new_predictions, dim=1)
+
+    accurate_predicts = 0
+    for i, row in enumerate(new_predictions_indices):
         
+        if number_to_action_map[row.item()] == number_to_action_map[new_data_actions[i]]:
+            accurate_predicts += 1
+
+    print(f"{accurate_predicts} accurate predictions out of total {len(new_predictions_indices)} images")
+
+
